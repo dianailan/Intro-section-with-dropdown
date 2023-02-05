@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="logo"></div>
+  <div class="navigation">
+    <p class="nav-item dropdown" (click)="changeArrow(0)">
+      Features
+      <img
+        class="arrows"
+        src="{{ '../../assets/images/' + arrowIcons[0] + '.svg' }}"
+        alt="Arrow"
+      />
+    </p>
+    <p class="nav-item dropdown" (click)="changeArrow(1)">
+      Company
+      <img
+        class="arrows"
+        src="{{ '../../assets/images/' + arrowIcons[1] + '.svg' }}"
+        alt="Arrow"
+      />
+    </p>
+    <p class="nav-item">Careers</p>
+    <p class="nav-item">About</p>
+  </div>
+  <div class="register">
+    <p>Login</p>
+    <button>register</button>
+  </div>
+</div>
+
+<div id="features" *ngIf="arrowIcons[0] === 'icon-arrow-up'">
+  <div class="feature-imgs">
+    <img src="../../assets/images/icon-todo.svg" alt="To-Do" />
+    <img src="../../assets/images/icon-calendar.svg" alt="Calendar" />
+    <img src="../../assets/images/icon-reminders.svg" alt="Reminders" />
+    <img src="../../assets/images/icon-planning.svg" alt="Planning" />
+  </div>
+  <div class="feature-links">
+    <p>To Do List</p>
+    <p>Calendar</p>
+    <p>Reminders</p>
+    <p>Planning</p>
+  </div>
+</div>
+<div id="company" *ngIf="arrowIcons[1] === 'icon-arrow-up'">
+  <p>History</p>
+  <p>Our Team</p>
+  <p>Blog</p>
+</div>

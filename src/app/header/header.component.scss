@@ -1,0 +1,103 @@
+body,
+html {
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.link-item {
+  color: hsl(0, 0%, 46%);
+  font-size: 16px;
+  user-select: none;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: hsl(0, 0%, 8%);
+  }
+}
+
+.container {
+  height: 100%;
+  margin-top: 20px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  background-image: url("../../assets/images/logo.svg");
+  width: 100px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navigation {
+  margin-left: 50px;
+  display: flex;
+  gap: 50px;
+  p {
+    @extend .link-item;
+    img {
+      margin-left: 6px;
+    }
+  }
+}
+
+.register {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-left: auto;
+  padding-right: 40px;
+  order: 2;
+  font-size: 16px;
+
+  p {
+    @extend .link-item;
+  }
+
+  button {
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    border: 2px solid hsl(0, 0%, 46%);
+    border-radius: 15px;
+    background-color: transparent;
+    @extend .link-item;
+  }
+}
+
+#features,
+#company {
+  box-shadow: 0px 14px 46px 4px rgba(198, 196, 196, 0.251);
+  border-radius: 10px;
+  padding: 15px 20px;
+  position: absolute;
+  background-color: white;
+
+  p {
+    @extend .link-item;
+    font-size: 14px;
+  }
+}
+
+#company {
+  width: 90px;
+  left: 328px;
+}
+
+#features {
+  width: 120px;
+  display: flex;
+  left: 125px;
+  gap: 20px;
+
+  .feature-imgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
